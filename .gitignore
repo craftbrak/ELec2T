@@ -44,7 +44,7 @@ htmlcov/
 .coverage
 .coverage.*
 .cache
-.workspace
+*.workspace
 nosetests.xml
 coverage.xml
 *.cover
