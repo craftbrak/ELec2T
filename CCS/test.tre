@@ -1,0 +1,6 @@
+ÀÄtest
+   ÃÄMAIN  0/60  Ram=1
+   ³  ÃÄ@cinit1  (Inline)  Ram=0
+   ³  ÃÄ@cinit2  (Inline)  Ram=0
+   ³  ÀÄ@delay_ms1  0/40  Ram=1
+   ÀÄEXT1_isr  0/6  Ram=0

@@ -1,0 +1,182 @@
+CCS PCH C Compiler, Version 5.101Pd, 1               17-févr.-21 12:18
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test.lst
+
+               ROM used:   276 bytes (1%)
+                           Largest free fragment is 32488
+               RAM used:   27 (2%) at main() level
+                           28 (2%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 31
+
+*
+0000:  GOTO   00DC
+*
+0008:  MOVWF  04
+000A:  MOVFF  FD8,05
+000E:  MOVFF  FE0,06
+0012:  MOVLB  0
+0014:  MOVFF  FE9,0C
+0018:  MOVFF  FEA,07
+001C:  MOVFF  FE1,08
+0020:  MOVFF  FE2,09
+0024:  MOVFF  FD9,0A
+0028:  MOVFF  FDA,0B
+002C:  MOVFF  FF3,12
+0030:  MOVFF  FF4,13
+0034:  MOVFF  FFA,14
+0038:  MOVFF  FF5,15
+003C:  MOVFF  FF6,16
+0040:  MOVFF  FF7,17
+0044:  MOVFF  00,0E
+0048:  MOVFF  01,0F
+004C:  MOVFF  02,10
+0050:  MOVFF  03,11
+0054:  BTFSS  FF0.3
+0056:  GOTO   0060
+005A:  BTFSC  FF0.0
+005C:  GOTO   00AE
+0060:  MOVFF  0E,00
+0064:  MOVFF  0F,01
+0068:  MOVFF  10,02
+006C:  MOVFF  11,03
+0070:  MOVFF  0C,FE9
+0074:  MOVFF  07,FEA
+0078:  BSF    07.7
+007A:  MOVFF  08,FE1
+007E:  MOVFF  09,FE2
+0082:  MOVFF  0A,FD9
+0086:  MOVFF  0B,FDA
+008A:  MOVFF  12,FF3
+008E:  MOVFF  13,FF4
+0092:  MOVFF  14,FFA
+0096:  MOVFF  15,FF5
+009A:  MOVFF  16,FF6
+009E:  MOVFF  17,FF7
+00A2:  MOVF   04,W
+00A4:  MOVFF  06,FE0
+00A8:  MOVFF  05,FD8
+00AC:  RETFIE 0
+.................... #include <test.h>
+.................... #include <18F458.h>
+.................... //////////// Standard Header file for the PIC18F458 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC18F458
+.................... 
+.................... #list
+.................... 
+.................... #device ADC=10
+.................... 
+.................... #FUSES NOWDT                 	//No Watch Dog Timer
+.................... 
+.................... #use delay(crystal=20000000)
+*
+00B4:  CLRF   FEA
+00B6:  MOVLW  1B
+00B8:  MOVWF  FE9
+00BA:  MOVF   FEF,W
+00BC:  BZ    00D8
+00BE:  MOVLW  06
+00C0:  MOVWF  01
+00C2:  CLRF   00
+00C4:  DECFSZ 00,F
+00C6:  BRA    00C4
+00C8:  DECFSZ 01,F
+00CA:  BRA    00C2
+00CC:  MOVLW  7B
+00CE:  MOVWF  00
+00D0:  DECFSZ 00,F
+00D2:  BRA    00D0
+00D4:  DECFSZ FEF,F
+00D6:  BRA    00BE
+00D8:  GOTO   010A (RETURN)
+.................... 
+.................... 
+.................... 
+.................... #INT_EXT
+.................... boolean flag0 =0;
+.................... boolean flag1 =0;
+.................... 
+.................... void  EXT_isr(void) 
+.................... {
+.................... 
+.................... }
+.................... 
+.................... #INT_EXT1
+.................... void  EXT1_isr(void) 
+.................... {
+.................... 
+*
+00AE:  BCF    FF0.0
+00B0:  GOTO   0060
+.................... }
+.................... 
+.................... void main()
+*
+00DC:  CLRF   FF8
+00DE:  BCF    FD0.7
+00E0:  BSF    07.7
+00E2:  BCF    19.0
+00E4:  BCF    19.1
+00E6:  BSF    FC1.0
+00E8:  BSF    FC1.1
+00EA:  BSF    FC1.2
+00EC:  BCF    FC1.3
+00EE:  MOVLW  07
+00F0:  MOVWF  FB4
+00F2:  CLRF   1A
+.................... {
+....................    int val =0;
+....................    enable_interrupts(INT_EXT);
+00F4:  BSF    FF2.4
+....................    enable_interrupts(INT_EXT1);
+00F6:  BSF    FF0.3
+....................    enable_interrupts(GLOBAL);
+00F8:  MOVLW  C0
+00FA:  IORWF  FF2,F
+....................    setup_low_volt_detect(FALSE);
+00FC:  CLRF   FD2
+.................... 
+....................    while(TRUE)
+....................    {
+....................       output_d(val);
+00FE:  CLRF   F95
+0100:  MOVFF  1A,F8C
+....................       delay_ms(250);
+0104:  MOVLW  FA
+0106:  MOVWF  1B
+0108:  BRA    00B4
+....................       val++;
+010A:  INCF   1A,F
+....................       if(val == 99){
+010C:  MOVF   1A,W
+010E:  SUBLW  63
+0110:  BNZ   0114
+....................          val =0;
+0112:  CLRF   1A
+....................       }
+0114:  BRA    00FE
+.................... 
+....................    }
+.................... 
+.................... }
+0116:  SLEEP 
+
+Configuration Fuses:
+   Word  1: 2200   HS NOOSCSEN
+   Word  2: 0E0E   PUT BROWNOUT BORV25 NOWDT WDT128
+   Word  3: 0000  
+   Word  4: 0081   STVREN NOLVP NODEBUG
+   Word  5: C00F   NOPROTECT NOCPB NOCPD
+   Word  6: E00F   NOWRT NOWRTC NOWRTB NOWRTD
+   Word  7: 400F   NOEBTR NOEBTRB

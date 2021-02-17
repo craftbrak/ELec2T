@@ -1,0 +1,40 @@
+[PROJECT]
+Target=test.hex
+Processor_Text=PIC18F458
+CCSVerions=5.101d-Prelim-01/22/21
+Compiler=PCH
+CCSVersion=5.101Pd
+[Target Data]
+FileList=test.c
+[Directories]
+Include=
+[D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test]
+Type=4
+[mru-list]
+1=test.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=17-02-2021
+D1_L=5
+D1_L1=[42655]Project Opened.
+D1_L2=[42736]Started Editing.
+D1_L3=[43612]Stopped Editing.
+D1_L4=[44301]Started Editing.
+D1_L5=[44603]Stopped Editing.
+
+[Opened Files]
+1=test.c
+t1=1
+Count=1
+[test.c]
+Type=4
+
+[defines]
+buildcount=2
+[Units]
+Count=1
+1=test (main)
