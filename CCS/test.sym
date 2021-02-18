@@ -26,44 +26,53 @@
 018     @INTERRUPT_AREA
 019.0   flag0
 019.1   flag1
-01A     MAIN.val
-01B     @delay_ms1.P1
+01A     MAIN.nb_persone
+01B     bitsToBCD.value
+01C     bitsToBCD.tens
+01D     bitsToBCD.unity
+01E     @delay_ms1.P1
+01E     bitsToBCD.@SCRATCH1
+01F     @DIV88.P1
+020     @DIV88.P1
+021     @DIV88.@SCRATCH1
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
 FBB     CCP_2_LOW
 FBB     CCP_2
 FBC     CCP_2_HIGH
-FBE     CCP_1
 FBE     CCP_1_LOW
+FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
-FE9-FEA @READ_PROGRAM_MEMORY.P4
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P3
+FE9-FEA @WRITE_PACKED_MEMORY.P4
 FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000AE  EXT1_isr
-0000B4  @delay_ms1
-0000DC  MAIN
-0000DC  @cinit1
-0000F2  @cinit2
+0000B4  @DIV88
+0000DC  @delay_ms1
+000102  bitsToBCD
+000158  @cinit1
+000158  MAIN
+00016E  @cinit2
 
 Project Directory:
     D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\
 
 Project Files:
-    test.c                                                  [17-févr.-21 12:18  CRC=4A7A2D7A]
+    test.c                                                  [18-févr.-21 22:26  CRC=69F25D59]
     test.h                                                  [17-févr.-21 11:50  CRC=00000000]
     E:\programdata\PICC\Devices\18F458.h                    [22-janv.-21 10:40  CRC=D5A7E9F2]
 
-Source signature=F5CA015E
+Source signature=1542313D
 Program memory checksum=0000
-Hex file CRC=DC2B
+Hex file CRC=B45B
 
 Units:
     D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test (main)

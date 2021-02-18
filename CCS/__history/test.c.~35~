@@ -25,7 +25,7 @@ void bitsToBCD(int value) {
    output_d(tens);
    output_high(TENS_DISPLAY);
    
-   delay_ms(10);
+   delay_ms(100);
    output_low(UNITY_DISPLAY);
    output_d(unity);
    output_low(UNITY_DISPLAY);
@@ -34,6 +34,7 @@ void bitsToBCD(int value) {
 void main()
 {
    int nb_persone =0;
+   int val_u =0,val_d=0 ;
    enable_interrupts(INT_EXT);
    enable_interrupts(INT_EXT1);
    enable_interrupts(GLOBAL);
@@ -46,10 +47,9 @@ void main()
       delay_ms(250);
       output_low(LED_PIN_GREEN);
       nb_persone++;
-      if(nb_persone == 99){
+      if(nb_persone == 6){
          output_high(LED_PIN_ALARM);
          delay_ms(250);
-         nb_persone =0;
          output_low(LED_PIN_ALARM );
       }
       
