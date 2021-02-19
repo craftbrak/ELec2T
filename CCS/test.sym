@@ -28,6 +28,7 @@
 019.1   flag1
 01A     MAIN.nb_persone
 01B     bitsToBCD.value
+01B     MAIN.@SCRATCH1
 01C     bitsToBCD.tens
 01D     bitsToBCD.unity
 01E     @delay_ms1.P1
@@ -54,25 +55,26 @@ FF6-FF8 @READ_PROGRAM_MEMORY.P1
 FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
-0000AE  EXT1_isr
-0000B4  @DIV88
-0000DC  @delay_ms1
-000102  bitsToBCD
-000158  @cinit1
-000158  MAIN
-00016E  @cinit2
+0000BA  EXT_isr
+0000C2  EXT1_isr
+0000CA  @DIV88
+0000F2  @delay_ms1
+000118  bitsToBCD
+00016E  MAIN
+00016E  @cinit1
+000184  @cinit2
 
 Project Directory:
     D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\
 
 Project Files:
-    test.c                                                  [18-févr.-21 22:26  CRC=69F25D59]
+    test.c                                                  [19-févr.-21 14:26  CRC=69B614C5]
     test.h                                                  [17-févr.-21 11:50  CRC=00000000]
     E:\programdata\PICC\Devices\18F458.h                    [22-janv.-21 10:40  CRC=D5A7E9F2]
 
-Source signature=1542313D
+Source signature=1505E8A9
 Program memory checksum=0000
-Hex file CRC=B45B
+Hex file CRC=E2D8
 
 Units:
     D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test (main)

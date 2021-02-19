@@ -57,7 +57,7 @@ void main()
       if(nb_persone == 9){
          output_low(LED_PIN_GREEN);
          output_high(LED_PIN_ALARM);
-         delay_ms(2500);
+         delay_ms(250);
          nb_persone =0;
          output_low(LED_PIN_ALARM );
       }

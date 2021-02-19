@@ -1,5 +1,5 @@
 ÀÄtest
-   ÃÄMAIN  0/82  Ram=1
+   ÃÄMAIN  0/104  Ram=2
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@cinit2  (Inline)  Ram=0
    ³  ÃÄbitsToBCD  0/86  Ram=4
@@ -10,4 +10,5 @@
    ³  ³  ÀÄ@delay_ms1  0/38  Ram=1
    ³  ÃÄ@delay_ms1  0/38  Ram=1
    ³  ÀÄ@delay_ms1  0/38  Ram=1
-   ÀÄEXT1_isr  0/6  Ram=0
+   ÃÄEXT_isr  0/8  Ram=0
+   ÀÄEXT1_isr  0/8  Ram=0

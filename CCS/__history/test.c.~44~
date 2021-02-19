@@ -9,6 +9,7 @@ boolean flag1 =0;
 void  EXT_isr(void) 
 {
  flag0 =1;
+ output_high(LED_PIN_ALARM);
 }
 
 #INT_EXT1
@@ -44,20 +45,20 @@ void main()
       output_high(LED_PIN_GREEN);
       bitsToBCD(nb_persone);
       delay_ms(250);
-      
+      output_low(LED_PIN_GREEN);
       if (flag0){
          flag0 =0;
          nb_persone++;
+         output_low(LED_PIN_ALARM );
       }
       if (flag1){
          flag1 =0;
          nb_persone--;
       }
       
-      if(nb_persone == 9){
-         output_low(LED_PIN_GREEN);
+      if(nb_persone == 99){
          output_high(LED_PIN_ALARM);
-         delay_ms(2500);
+         delay_ms(250);
          nb_persone =0;
          output_low(LED_PIN_ALARM );
       }

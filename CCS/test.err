@@ -1,6 +1,4 @@
-Compiling D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test on 18-févr.-21 at 22:26
->>> Warning 202 "D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test.c" Line 7(9,14): Variable never used:   flag0
->>> Warning 202 "D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test.c" Line 8(9,14): Variable never used:   flag1
+Compiling D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test on 19-févr.-21 at 14:26
       Memory usage:   ROM=1%      RAM=2% - 2%
-      0 Errors,  2 Warnings.
+      0 Errors,  0 Warnings.
 Build Successful.

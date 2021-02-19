@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=2
+Days=3
 D1=17-02-2021
 D1_L=6
 D1_L1=[42655]Project Opened.
@@ -60,10 +60,23 @@ D2_L23=[80671]Stopped Editing.
 D2_L24=[80789]Started Editing.
 D2_L25=[81006]Stopped Editing.
 D2_L26=[81006]Project Closed.
+D3=19-02-2021
+D3_L=11
+D3_L1=[37719]Project Opened.
+D3_L2=[37874]Started Editing.
+D3_L3=[38305]Stopped Editing.
+D3_L4=[41803]Started Editing.
+D3_L5=[42113]Stopped Editing.
+D3_L6=[50258]Started Editing.
+D3_L7=[50894]Stopped Editing.
+D3_L8=[51017]Started Editing.
+D3_L9=[51327]Stopped Editing.
+D3_L10=[51867]Started Editing.
+D3_L11=[52267]Stopped Editing.
 
 [Opened Files]
 1=test.c
-t1=1
+t1=13
 Count=2
 2=..\..\DTE\PROTEUS\sonde2.c
 t2=1
@@ -71,7 +84,7 @@ t2=1
 Type=4
 
 [defines]
-buildcount=21
+buildcount=28
 [Units]
 Count=1
 1=test (main)

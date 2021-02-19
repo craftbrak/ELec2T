@@ -1,9 +1,9 @@
-D G "__PCH__" 0 62 ""5.101Pd""
-D G "__DEVICE__" 0 62 "458"
-D G "__DATE__" 0 62 ""18-Feb-21""
-D G "__TIME__" 0 62 ""22:26:52""
-D G "_UNICODE" 0 62 ""?""
-D G "__EVAL" 0 62 ""?"" "Standard Header file for the PIC18F458 device ////////////////"
+D G "__PCH__" 0 70 ""5.101Pd""
+D G "__DEVICE__" 0 70 "458"
+D G "__DATE__" 0 70 ""19-Feb-21""
+D G "__TIME__" 0 70 ""14:26:09""
+D G "_UNICODE" 0 70 ""?""
+D G "__EVAL" 0 70 ""?"" "Standard Header file for the PIC18F458 device ////////////////"
 c L "set_tris_a" 2 3 6 "FUNCTION"
 F N "set_tris_a" 2 40 ""
 V L "value" 2 40 "int8" `55 
@@ -1273,14 +1273,14 @@ D G "INT_CANRX1" 2 814 "0x00A302"
 D G "INT_CANRX0" 2 815 "0x00A301"
 D G "LED_PIN_ALARM" 0 2 "PIN_B6"
 D G "LED_PIN_GREEN" 0 3 "PIN_B7"
-D G "TENS_DISPLAY" 0 5 "PIN_E1"
-D G "UNITY_DISPLAY" 0 6 "PIN_E0"
-V G "flag0" 0 7 "int1" `719 
-V G "flag1" 0 8 "int1" `720 
-F N "EXT_isr" 0 10 ""
-F G "EXT_isr" 0 11 "void()" `721 
-F N "EXT1_isr" 0 16 ""
-F G "EXT1_isr" 0 17 "void()" `722 
+D G "TENS_DISPLAY" 0 4 "PIN_E1"
+D G "UNITY_DISPLAY" 0 5 "PIN_E0"
+V G "flag0" 0 6 "int1" `719 
+V G "flag1" 0 7 "int1" `720 
+F N "EXT_isr" 0 9 ""
+F G "EXT_isr" 0 10 "void()" `721 
+F N "EXT1_isr" 0 15 ""
+F G "EXT1_isr" 0 16 "void()" `722 
 F N "bitsToBCD" 0 20 ""
 V L "value" 0 20 "int8" `724 
 F G "bitsToBCD" 0 20 "void(int8 value)" `723 

@@ -1,11 +1,12 @@
 #include <test.h>
 #define LED_PIN_ALARM PIN_B6
 #define LED_PIN_GREEN PIN_B7
+#INT_EXT
 #define TENS_DISPLAY PIN_E1
 #define UNITY_DISPLAY PIN_E0
 boolean flag0 =0;
 boolean flag1 =0;
-#INT_EXT
+
 void  EXT_isr(void) 
 {
  flag0 =1;
@@ -15,7 +16,6 @@ void  EXT_isr(void)
 void  EXT1_isr(void) 
 {
    flag1 =1;
-   
 }
 void bitsToBCD(int value) {
    int tens = value / 10 % 10;
@@ -44,7 +44,7 @@ void main()
       output_high(LED_PIN_GREEN);
       bitsToBCD(nb_persone);
       delay_ms(250);
-      
+      output_low(LED_PIN_GREEN);
       if (flag0){
          flag0 =0;
          nb_persone++;
@@ -54,10 +54,9 @@ void main()
          nb_persone--;
       }
       
-      if(nb_persone == 9){
-         output_low(LED_PIN_GREEN);
+      if(nb_persone == 99){
          output_high(LED_PIN_ALARM);
-         delay_ms(2500);
+         delay_ms(250);
          nb_persone =0;
          output_low(LED_PIN_ALARM );
       }
