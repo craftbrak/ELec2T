@@ -25,7 +25,7 @@ D1_L2=[42736]Started Editing.
 D1_L3=[43612]Stopped Editing.
 D1_L4=[44301]Started Editing.
 D1_L5=[44603]Stopped Editing.
-TotalEdit=71
+TotalEdit=95
 TotalDebug=0
 D1_E=10
 D1_D=0
@@ -61,7 +61,7 @@ D2_L24=[80789]Started Editing.
 D2_L25=[81006]Stopped Editing.
 D2_L26=[81006]Project Closed.
 D3=19-02-2021
-D3_L=11
+D3_L=24
 D3_L1=[37719]Project Opened.
 D3_L2=[37874]Started Editing.
 D3_L3=[38305]Stopped Editing.
@@ -73,18 +73,33 @@ D3_L8=[51017]Started Editing.
 D3_L9=[51327]Stopped Editing.
 D3_L10=[51867]Started Editing.
 D3_L11=[52267]Stopped Editing.
+D3_E=24
+D3_D=0
+D3_L12=[53683]Project Closed.
+D3_L13=[53950]Project Opened.
+D3_L14=[56480]Project Closed.
+D3_L15=[56511]Project Opened.
+D3_L16=[56526]Started Editing.
+D3_L17=[57144]Stopped Editing.
+D3_L18=[57144]Project Closed.
+D3_L19=[57832]Project Opened.
+D3_L20=[57841]Started Editing.
+D3_L21=[58014]Stopped Editing.
+D3_L22=[58014]Project Closed.
+D3_L23=[58204]Project Opened.
+D3_L24=[58210]Started Editing.
 
 [Opened Files]
 1=test.c
-t1=13
+t1=25
 Count=2
-2=..\..\DTE\PROTEUS\sonde2.c
+2=test.h
 t2=1
 [test.c]
 Type=4
 
 [defines]
-buildcount=28
+buildcount=31
 [Units]
 Count=1
 1=test (main)

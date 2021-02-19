@@ -44,7 +44,7 @@ void main()
    {  
       output_high(LED_PIN_GREEN);
       bitsToBCD(nb_persone);
-      printf("%d ",nb_persone);
+      printf(nb_persone);
       delay_ms(250);
       
       if (flag0){

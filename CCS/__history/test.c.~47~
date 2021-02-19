@@ -3,7 +3,6 @@
 #define LED_PIN_GREEN PIN_B7
 #define TENS_DISPLAY PIN_E1
 #define UNITY_DISPLAY PIN_E0
-
 boolean flag0 =0;
 boolean flag1 =0;
 #INT_EXT
@@ -44,7 +43,7 @@ void main()
    {  
       output_high(LED_PIN_GREEN);
       bitsToBCD(nb_persone);
-      printf("%d ",nb_persone);
+      printf(nb_persone);
       delay_ms(250);
       
       if (flag0){
