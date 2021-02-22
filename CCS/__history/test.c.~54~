@@ -44,27 +44,24 @@ void main()
    {  
       output_high(LED_PIN_GREEN);
       bitsToBCD(nb_persone);
-      
+      printf("\NP\%d ",nb_persone);
       delay_ms(250);
       
       if (flag0){
          flag0 =0;
          nb_persone++;
-         printf("\NP\%d ",nb_persone);
       }
       if (flag1){
          flag1 =0;
          nb_persone--;
-         printf("\NP\%d ",nb_persone);
       }
-      
+      nb_persone++;
       if(nb_persone == 29){
          output_low(LED_PIN_GREEN);
          output_high(LED_PIN_ALARM);
-         printf("ALARM ");
          delay_ms(2500);
          nb_persone =0;
-         
+         printf("ALARM");
          output_low(LED_PIN_ALARM );
       }
       
