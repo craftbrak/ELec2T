@@ -39,7 +39,7 @@ void main()
    enable_interrupts(INT_EXT1);
    enable_interrupts(GLOBAL);
    setup_low_volt_detect(FALSE);
-
+   printf("*NB*%d",nb_persone);
    while(TRUE)
    {  
       output_high(LED_PIN_GREEN);
@@ -50,12 +50,12 @@ void main()
       if (flag0){
          flag0 =0;
          nb_persone++;
-         printf("\NP\%d ",nb_persone);
+         printf("*NB*%d",nb_persone);
       }
       if (flag1){
          flag1 =0;
          nb_persone--;
-         printf("\NP\%d ",nb_persone);
+         printf("*NB*%d",nb_persone);
       }
       
       if(nb_persone == 29){
