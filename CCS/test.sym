@@ -29,13 +29,16 @@
 01A-01B @sprintf_string
 01C     MAIN.nb_persone
 01D     @PRINTF_D_720.P1
+01D     @PSTRINGCN_720.P2
 01D     bitsToBCD.value
 01D     MAIN.@SCRATCH1
 01D     @PSTRINGC_720.@SCRATCH1
-01E     @PRINTF_D_720.P1
 01E     bitsToBCD.tens
+01E     @PRINTF_D_720.P1
+01E     @PSTRINGCN_720.@SCRATCH1
 01E     @PSTRINGC_720.@SCRATCH2
 01F     bitsToBCD.unity
+01F     @PSTRINGCN_720.@SCRATCH2
 01F     @PRINTF_D_720.@SCRATCH1
 020     @delay_ms1.P1
 020     bitsToBCD.@SCRATCH1
@@ -49,46 +52,50 @@
 F83     PSP_DATA
 FB4.6   C1OUT
 FB4.7   C2OUT
-FBB     CCP_2
 FBB     CCP_2_LOW
+FBB     CCP_2
 FBC     CCP_2_HIGH
-FBE     CCP_1_LOW
 FBE     CCP_1
+FBE     CCP_1_LOW
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PACKED_MEMORY.P1
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PROGRAM_MEMORY.P1
 FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PACKED_MEMORY.P3
 FE9-FEA @WRITE_PACKED_MEMORY.P4
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
-FF6-FF8 @READ_PROGRAM_MEMORY.P2
+FF6-FF8 @READ_PROGRAM_MEMORY.P1
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000BA  EXT_isr
 0000C2  EXT1_isr
-0000CA  @const743.call
-0000D2  @DIV88
-0000FA  @delay_ms1
-000120  bitsToBCD
-000176  @PUTCHAR_1_
-0001B6  @PRINTF_D_720
-000260  @PSTRINGC_720
-000282  MAIN
-000282  @cinit1
-0002A0  @cinit2
+0000CA  @const738.call
+0000D2  @const744.call
+0000DA  @const745.call
+0000E2  @const746.call
+0000EA  @PUTCHAR_1_
+00012A  @PSTRINGCN_720
+000148  @DIV88
+000170  @PRINTF_D_720
+00021A  @delay_ms1
+000240  bitsToBCD
+000296  @PSTRINGC_720
+0002B8  MAIN
+0002B8  @cinit1
+0002D6  @cinit2
 
 Project Directory:
     D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\
 
 Project Files:
-    test.c                                                  [22-févr.-21 14:35  CRC=3188F522]
+    test.c                                                  [24-févr.-21 15:27  CRC=0CF1B0F4]
     test.h                                                  [19-févr.-21 16:10  CRC=D872A938]
     E:\programdata\PICC\Devices\18F458.h                    [22-janv.-21 10:40  CRC=D5A7E9F2]
 
-Source signature=B54B723E
+Source signature=90B42E10
 Program memory checksum=0000
-Hex file CRC=D4F0
+Hex file CRC=2C54
 
 Units:
     D:\OneDrive - EPHEC asbl\2T\Elec\github\ELec2T\CCS\test (main)
