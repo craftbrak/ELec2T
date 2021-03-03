@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=4
+Days=5
 D1=17-02-2021
 D1_L=6
 D1_L1=[42655]Project Opened.
@@ -25,7 +25,7 @@ D1_L2=[42736]Started Editing.
 D1_L3=[43612]Stopped Editing.
 D1_L4=[44301]Started Editing.
 D1_L5=[44603]Stopped Editing.
-TotalEdit=109
+TotalEdit=115
 TotalDebug=0
 D1_E=10
 D1_D=0
@@ -102,6 +102,12 @@ D4_L5=[52103]Project Opened.
 D4_L6=[52116]Started Editing.
 D4_L7=[52820]Stopped Editing.
 D4_L8=[53180]Project Closed.
+D5=24-02-2021
+D5_L=2
+D5_L1=[55944]Stopped Editing.
+D5_E=6
+D5_D=0
+D5_L2=[57746]Project Closed.
 
 [Opened Files]
 1=test.c
@@ -113,7 +119,7 @@ t2=1
 Type=4
 
 [defines]
-buildcount=39
+buildcount=41
 [Units]
 Count=1
 1=test (main)
