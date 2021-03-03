@@ -3,6 +3,17 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# CCS
+__history/
+CCS/*.err
+CCS/*.cof
+CCS/*.esym
+CCS/*.STA
+CCS/*.sym
+CCS/*.tre
+CCS/*.xsym
+CCS/*.lst
+
 # C extensions
 *.so
 
