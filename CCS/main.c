@@ -56,6 +56,7 @@ void main() {
 	setup_low_volt_detect(false);
 
 	/*printf(MSG_PEOPLE, people);*/
+	display(people);
 	send(false, people, max_people);
 	output_high(LED_GREEN);
 	output_low(LED_RED);
