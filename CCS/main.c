@@ -69,8 +69,10 @@ void main() {
 		}
 		if (flag_sub) {
 			flag_sub = false;
-			changed = !changed;
-			--people;
+			if (people > 0) {
+				changed = !changed;
+				--people;
+			}
 		}
 		if (flag_dat) {
 			flag_dat = false;
