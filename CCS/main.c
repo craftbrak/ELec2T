@@ -1,6 +1,5 @@
-#include <main.h>
-#include <common.h>
-#include <display.h>
+#include "common.h"
+#include "display.h"
 
 #define BUFFER_SIZE 3
 

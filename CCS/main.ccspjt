@@ -7,7 +7,7 @@ CCSVersion=5.101Pd
 Development_Mode=
 ToolSuite=CCS
 [Target Data]
-FileList=main.c
+FileList=$linker.c
 BuildTool=C-COMPILER
 OptionString=+FH
 AdditionalOptionString=
@@ -52,20 +52,23 @@ D1_L4=[64534]Started Editing.
 D1_L5=[64834]Stopped Editing.
 D1_L6=[66405]Project Closed.
 D2=03-03-2021
-D2_L=2
+D2_L=3
 D2_L1=[75924]Project Opened.
 D2_L2=[76495]Project Closed.
+D2_L3=[76671]Project Opened.
 
 [Opened Files]
 1=main.c
 t1=1
-Count=4
+Count=5
 2=main.h
 t2=1
 3=display.h
 t3=1
 4=common.h
 t4=1
+5=display.c
+t5=1
 [main.c]
 Type=4
 Path=
@@ -75,7 +78,7 @@ OptionString=
 AdditionalOptionString=
 
 [defines]
-buildcount=21
+buildcount=24
 enabled=0
 chip=1
 D1=
@@ -98,5 +101,7 @@ Count=1
 Count=0
 1=main=d:\documents\ecole\2020-2021\elec2t\ccs\display.c
 [Units]
-Count=1
-1=main (main)
+Count=2
+1=main
+2=display
+Link=1

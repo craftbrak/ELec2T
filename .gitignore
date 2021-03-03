@@ -7,11 +7,13 @@ __pycache__/
 __history/
 CCS/*.err
 CCS/*.cof
-CCS/*.esym
-CCS/*.STA
+CCS/*.o
 CCS/*.sym
-CCS/*.tre
+CCS/*.osym
+CCS/*.esym
 CCS/*.xsym
+CCS/*.STA
+CCS/*.tre
 CCS/*.lst
 
 # C extensions
