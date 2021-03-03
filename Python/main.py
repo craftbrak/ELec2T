@@ -7,10 +7,10 @@ ser = serial.Serial('COM4', baudrate=9600, timeout=1)
 
 def fct():
     while True:
-        msg = ser.readline()
+        msg = ser.readline().decode('ascii')
         if len(msg) != 0:
-            msg.split("*")
-            print(msg)
+            msg_split = msg.split("*")
+            print("Nombre de personne à l'intérieur : " + msg_split[1] + " " + msg_split[2])
 
 
 if __name__ == '__main__':
